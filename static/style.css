@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 24px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: white;
+    padding: 24px 28px;
+    border-radius: 24px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.hero p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.hero-badge {
+    background: rgba(255,255,255,0.16);
+    padding: 12px 16px;
+    border-radius: 999px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.stat-card, .panel {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: #cbd5e1;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.panel h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.add-form, .edit-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+input, button, select {
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    font-size: 14px;
+    background: #1e293b;
+    color: white;
+}
+
+button {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button.danger {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+button.secondary {
+    background: linear-gradient(135deg, #0284c7, #38bdf8);
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+}
+
+.item-card {
+    background: #111827;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 14px;
+}
+
+.item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.price {
+    margin: 10px 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fbbf24;
+}
+
+.buy-price {
+    margin: 8px 0 14px;
+    color: #cbd5e1;
+}
+
+.card-actions, .inline-form {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.stock-pill {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    background: #15803d;
+}
+
+.stock-pill.low {
+    background: #b45309;
+}
+
+.hint {
+    color: #94a3b8;
+    margin-top: -6px;
+    margin-bottom: 12px;
+}
+
+.sale-list {
+    display: grid;
+    gap: 8px;
+}
+
+.sale-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111827;
+    padding: 10px 12px;
+    border-radius: 12px;
+}
+
+.alert {
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.alert.success { background: #14532d; color: #dcfce7; }
+.alert.error { background: #7f1d1d; color: #fee2e2; }
+
+.profit-box {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(34, 197, 94, 0.15);
+    color: #dcfce7;
+}
+
+.sales-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.sale-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    background: #111827;
+    border-radius: 12px;
+    padding: 10px 12px;
+}
+
+.sale-row p {
+    margin: 4px 0 0;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+@media (max-width: 980px) {
+    .main-layout { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr; }
+}
