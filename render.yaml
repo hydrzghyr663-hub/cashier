@@ -2,9 +2,15 @@ services:
   - type: web
     name: cashier-system
     env: python
-    plan: free
+    plan: starter
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python app.py"
+    disk:
+      name: cashier-data
+      mountPath: /var/data
+      sizeGB: 1
     envVars:
+      - key: POS_DB_PATH
+        value: /var/data/pos.db
       - key: POS_ADMIN_PIN
         sync: false

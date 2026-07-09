@@ -74,7 +74,8 @@ git push -u origin main
 2. اختر New + ثم Web Service.
 3. اربط مستودع GitHub الخاص بالمشروع.
 4. Render سيقرأ `render.yaml` تلقائيًا.
-5. بعد اكتمال النشر ستحصل على رابط عام مثل:
+5. أضفتُ إعدادًا لتخزين SQLite على مسار دائم (`POS_DB_PATH=/var/data/pos.db`) حتى لا تضيع البيانات عند إعادة التشغيل.
+6. بعد اكتمال النشر ستحصل على رابط عام مثل:
    `https://cashier-system.onrender.com`
 
 ### 3) إرسال الرابط للزبون
